@@ -17,7 +17,7 @@ function App() {
   const [Thumbnail, setThumbnail] = useState('');
 
   useEffect(()=>{
-    fetch(`${airtable_api_url}/${airtable_base}/${airtable_table}`, {
+    fetch(`${airtable_api_url}/${airtable_base}/${airtable_table}?sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc`, {
        "headers": {"Authorization": `Bearer ${process_api_key}`}
     })
     .then(res => res.json())
