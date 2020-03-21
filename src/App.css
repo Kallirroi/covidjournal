@@ -12,14 +12,13 @@
 	margin-top: 10vh;
 	padding-bottom: 1vh;
 	margin-bottom: 1vh;
-  border-bottom: 1px solid rgba(0,0,0,0.5);
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .subtitle {
 	font-size: 13px;
   font-weight: 400;
-  color: rgba(0,0,0,0.5);
+  opacity: 0.5;
 }
 
 main::before {
