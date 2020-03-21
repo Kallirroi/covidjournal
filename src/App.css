@@ -1,38 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 .App {
-  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0 auto;
+  width: 85vw;
+  height: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+	font-size: 18px;
+	margin-top: 10vh;
+	padding-bottom: 1vh;
+	margin-bottom: 1vh;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+	font-size: 13px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main::before {
+	display: block;
+	position: fixed;
+	content: '';
+	width: 100%;
+	box-shadow: 0 0 30px 30px #fff;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	margin: 10vh 0;
+	height: 60vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.entries {
+	height: 100%;
+	/*border: 1px solid #00f;*/
+	font-size: 13px;
+	text-align: right;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.row .name:hover{
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.details {
+  /*border: 1px solid;*/
+	height: 100%;
+  font-size: 13px;
+  line-height: 1.3;
+  max-width: 50vw;
+  overflow: scroll;
+  flex-grow: 1;
+}
+
+.details > * {
+	display: inline-block;
+	padding: 1vh 2vw 1vh 0;
+}
+
+a {
+	color: #00f;
+	text-decoration: none;
+}
+
+.credits {
+	position: absolute;
+	bottom: 3vh;
+  font-size: 13px;
+	opacity: 0.5;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+  .details {
+		display: none;
+	}
+
+	.subtitle::after {
+		content: 'Please switch to a wider view :)' ;
+		color: #00f;
+		margin-top: 10vh;
+		display: block;
+		opacity: 1 !important;
+	}
+
+	.entries {
+		display: none;
+	}
+
+	.credits {
+		display: none;
+	}
 }
