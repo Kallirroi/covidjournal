@@ -49,7 +49,7 @@ function App() {
 
         <div className='details'>
           {Thumbnail && <div className='image'><img src={Thumbnail} width='50%' alt='thumbnail' /></div> }
-          <div className='notes'>{Notes}</div>
+          <div className='notes' dangerouslySetInnerHTML={{__html: Notes }} />
           <div className='URL'><a href={URL} target='_blank' rel="noopener noreferrer">{URL}</a></div>
         </div> 
 
