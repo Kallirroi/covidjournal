@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='title'>journal</div>
+      <div className='title'>TESTTTTTT</div>
       <div className='subtitle'>during some strange times / best viewed on desktop / images most likely from <a href='https://www.are.na/kalli-retzepi/mais-oui-images'>here</a> </div>
       <main> 
 
